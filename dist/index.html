@@ -13,7 +13,7 @@
           <a
             href="#"
             @click.prevent.stop="navShow = !navShow"
-            class="lg:hidden absolute transition duration-300 h-[60px] flex justify-center items-center px-3"
+            class="lg:hidden absolute h-[60px] flex justify-center items-center px-3 transform transition duration-300"
             :class="{'translate-x-80':navShow}"
           >
             <span class="transition duration-300" :class="{'hidden': navShow}"
@@ -63,7 +63,7 @@
         <div class="max-w-7xl mx-auto">Main Content</div>
       </main>
       <footer
-        class="h-[60px] w-full flex items-center bg-slate-800 text-gray-400 p-4"
+        class="h-[60px] w-full flex items-center bg-gray-800 text-gray-400 p-4"
       >
         <div class="max-w-7xl mx-auto w-full">footer &copy 2022</div>
       </footer>
