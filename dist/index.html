@@ -8,21 +8,31 @@
   </head>
   <body>
     <div id="wrapper" class="h-screen flex flex-col">
-      <header class="h-[60px] bg-white" x-data="{navShow:false}">
-        <div class="max-w-7xl mx-auto h-full border-b border-b-gray-200">
+      <header class="h-20 bg-white" x-data="{navShow:false}">
+        <div class="max-w-7xl mx-auto h-full border-b border-b-gray-200 flex">
           <a
             href="#"
             @click.prevent.stop="navShow = !navShow"
-            class="lg:hidden absolute h-[60px] flex justify-center items-center px-3 transform transition duration-300"
+            class="lg:hidden relative z-50 h-20 flex justify-center items-center px-3 transform transition duration-300"
             :class="{'translate-x-80':navShow}"
           >
             <span class="transition duration-300" :class="{'hidden': navShow}"
-              >Menu</span
+              >Open Menu</span
             >
             <span class="transition duration-300" :class="{'hidden': !navShow}"
               >Close Menu</span
             >
           </a>
+          <!-- Mobile Menu: hidden on desktop -->
+          <a
+            href="#"
+            class="lg:hidden absolute z-30 w-full font-bold text-3xl lg:h-full h-20 px-4 flex justify-center items-center grow transform transition duration-300"
+            :class="{'opacity-0 -translate-y-9':navShow}"
+            >Logo</a
+          >
+          <!--  -->
+
+          <!-- Menu -->
           <nav
             class="h-full flex items-center lg:w-full w-80 lg:flex-row flex-col lg:relative fixed bg-white lg:border-none border-r border-r-gray-200 transition duration-300 transform"
             :class="{'lg:translate-x-0 -translate-x-80 lg:opacity-100 opacity-0':!navShow, 'translate-x-0 opacity-100' : navShow}"
@@ -57,13 +67,17 @@
               </li>
             </ul>
           </nav>
+          <!--  -->
         </div>
       </header>
       <main class="grow p-3">
-        <div class="max-w-7xl mx-auto">Main Content</div>
+        <div class="max-w-7xl mx-auto">
+          <!-- Main content goes here -->
+          Main Content
+        </div>
       </main>
       <footer
-        class="h-[60px] w-full flex items-center bg-gray-800 text-gray-400 p-4"
+        class="h-20 w-full flex items-center bg-gray-800 text-gray-400 px-4"
       >
         <div class="max-w-7xl mx-auto w-full">footer &copy 2022</div>
       </footer>
