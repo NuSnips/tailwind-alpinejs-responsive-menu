@@ -10,4 +10,4 @@ npm i
 npm start
 ```
 
-<a href="https://codepen.io/nuwanthi-desilva/pen/MWVZEVr">Demo</a>
+<a href="https://codepen.io/nuwanthi-desilva/pen/MWVZEVr" target="_blank">Demo</a>
